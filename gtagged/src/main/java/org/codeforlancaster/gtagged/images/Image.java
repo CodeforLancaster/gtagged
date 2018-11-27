@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -16,6 +17,8 @@ public class Image {
 
     double lat;
     double lon;
+
+    @Id
     String uri;
     String user;
 
