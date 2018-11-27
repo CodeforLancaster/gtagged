@@ -1,6 +1,7 @@
 package org.codeforlancaster.gtagged.images;
 
 import lombok.NonNull;
+import lombok.Setter;
 import org.codeforlancaster.gtagged.Hex;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,7 @@ import java.security.NoSuchAlgorithmException;
 @Service
 public class FileSystemImageStorageService implements ImageStorageService {
 
+    @Setter
     @Value("${gtagged.storage.directory}")
     private String directory;
 
@@ -52,6 +54,10 @@ public class FileSystemImageStorageService implements ImageStorageService {
 
         Path path = Paths.get(directory, hash);
 
+        if(Files.exists(path)) {
+            throw new DuplicateImageException();
+        }
+
         Files.write(path.toAbsolutePath(), file.getBytes());
 
         return hash;
@@ -63,6 +69,22 @@ public class FileSystemImageStorageService implements ImageStorageService {
         return new FileInputStream(path.toFile());
     }
 
+    public void clear(String key) throws IOException {
+        Path path = Paths.get(directory, key);
+
+        if(!Hex.isHex(key) || !path.toAbsolutePath().startsWith(Paths.get(directory).toAbsolutePath())) {
+            throw new IllegalKeyException();
+        }
+
+        path.toFile().delete();
+    }
+
+    @ResponseStatus(code = HttpStatus.FORBIDDEN, reason = "The specified key is illegal.")
+    public static class IllegalKeyException extends RuntimeException {}
+
     @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "The provided file is not a valid image file.")
     public static class InvalidImageTypeException extends RuntimeException {}
+
+    @ResponseStatus(code = HttpStatus.CONFLICT, reason = "This image is already in storage.")
+    public static class DuplicateImageException extends RuntimeException {}
 }

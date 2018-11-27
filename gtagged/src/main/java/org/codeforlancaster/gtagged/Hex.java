@@ -18,4 +18,14 @@ public class Hex {
         return new String(stringBase);
     }
 
+    public static boolean isHex(String hexString) {
+        for(char c : hexString.toCharArray()) {
+            if(c > 'F' || c < '0') {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 }
