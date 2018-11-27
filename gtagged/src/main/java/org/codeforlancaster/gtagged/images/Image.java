@@ -30,13 +30,13 @@ import java.time.LocalDateTime;
         }
 )
 @NamedNativeQuery(name = "Image.search", query = "SELECT uri, distance, lat, lon\n" +
-        "From (Select uri, ( 6371 * acos( cos( radians(:lat) )  \n" +
-        "          * cos( radians( lat ) ) \n" +
-        "          * cos( radians( lon ) - radians(:lon) ) + \n" +
-        "             sin( radians(:lat) ) \n" +
-        "          * sin(radians(lat)) ) ) distance, lat, lon \n" +
-        "      From images)\n" +
-        "Where distance < :radius \n" +
+        "FROM (SELECT uri, ( 6371 * ACOS( COS( RADIANS(:lat) )  \n" +
+        "          * COS( RADIANS( lat ) ) \n" +
+        "          * COS( RADIANS( lon ) - RADIANS(:lon) ) + \n" +
+        "             SIN( RADIANS(:lat) ) \n" +
+        "          * SIN(RADIANS(lat)) ) ) distance, lat, lon \n" +
+        "      FROM images)\n" +
+        "WHERE distance < :radius \n" +
         "ORDER BY distance", resultSetMapping = "imageResultMapping")
 public class Image {
 
