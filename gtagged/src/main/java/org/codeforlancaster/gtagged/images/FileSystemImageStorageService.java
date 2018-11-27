@@ -1,10 +1,14 @@
 package org.codeforlancaster.gtagged.images;
 
+import lombok.NonNull;
 import org.codeforlancaster.gtagged.Hex;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.imageio.ImageIO;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,7 +32,16 @@ public class FileSystemImageStorageService implements ImageStorageService {
     public FileSystemImageStorageService() throws NoSuchAlgorithmException { }
 
     @Override
-    public String store(MultipartFile file) throws IOException {
+    public String store(@NonNull MultipartFile file) throws IOException {
+
+        try (InputStream input = file.getInputStream()) {
+            try {
+                ImageIO.read(input).toString();
+                // It's BMP, PNG, JPG or GIF.
+            } catch (Exception e) {
+                throw new InvalidImageTypeException();
+            }
+        }
 
         byte[] bytes = SHA256.digest(file.getBytes());
         String hash = Hex.toHexString(bytes);
@@ -50,4 +63,6 @@ public class FileSystemImageStorageService implements ImageStorageService {
         return new FileInputStream(path.toFile());
     }
 
+    @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "The provided file is not a valid image file.")
+    public static class InvalidImageTypeException extends RuntimeException {}
 }

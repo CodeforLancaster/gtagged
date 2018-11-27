@@ -38,6 +38,21 @@ public class ImageTests extends AbstractMockMvcTest {
     }
 
     @Test
+    public void testCreateWithTags() throws Exception {
+
+        MockMultipartFile image = new MockMultipartFile("file", "graffiti.jpg", "image/jpeg", "nfoiaga".getBytes());
+        when(imageStorageService.store(image)).thenReturn("123");
+        MVC.perform(multipart("/images").file(image)
+                .param("lat", "54.2083723")
+                .param("lon", "-2.8978349")
+                .param("tag", "#graffiti")
+                .param("tag", "#art")
+        ).andDo(print())
+                .andExpect(status().isCreated())
+                .andExpect(header().string("Location", "123"));
+    }
+
+    @Test
     public void testSearch() throws Exception {
 
         MockMultipartFile image = new MockMultipartFile("file", "graffiti.jpg", "image/jpeg", "89y3rw8h93f93f".getBytes());

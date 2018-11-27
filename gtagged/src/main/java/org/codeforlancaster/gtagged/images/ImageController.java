@@ -36,7 +36,8 @@ public class ImageController {
     public ResponseEntity<Void> upload(
             @RequestParam("file") MultipartFile file,
             @RequestParam("lat") double lat,
-            @RequestParam("lon") double lon) throws IOException {
+            @RequestParam("lon") double lon,
+            @RequestParam(value = "tags", required = false) List<String> tags) throws IOException {
 
         String uri = imageStorageService.store(file);
         Image image = new Image();
@@ -44,6 +45,10 @@ public class ImageController {
         image.setLon(lon);
         image.setUri(uri);
         image.setUser("test");
+
+        if(tags != null && !tags.isEmpty()) {
+            tags.forEach(image::tag);
+        }
 
         imageRepository.save(image);
 
