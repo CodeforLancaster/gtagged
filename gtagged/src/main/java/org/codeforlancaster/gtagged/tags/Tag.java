@@ -1,6 +1,5 @@
 package org.codeforlancaster.gtagged.tags;
 
-<<<<<<< HEAD
 import javax.persistence.Embeddable;
 
 import org.springframework.data.annotation.PersistenceConstructor;
@@ -61,8 +60,5 @@ public final class Tag implements Comparable<Tag> {
 
         return this.value.compareTo(o.value);
     }
-=======
-public class Tag {
 
->>>>>>> f40064dd94444530f535c516abc3632960102f86
 }
