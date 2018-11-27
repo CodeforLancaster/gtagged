@@ -68,7 +68,7 @@ public class ImageController {
             HttpServletRequest request
     ) {
         if(radius > MAX_RADIUS_KM) {
-            throw new IllegalStateException("Radius must be less than 10km");
+            throw new IllegalStateException(String.format("Radius must be less than %.2fkm", MAX_RADIUS_KM));
         }
 
         List<ImageResource> images = imageRepository.search(lat, lon, radius);
