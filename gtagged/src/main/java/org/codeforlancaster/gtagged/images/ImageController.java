@@ -1,21 +1,22 @@
 package org.codeforlancaster.gtagged.images;
 
 import lombok.AllArgsConstructor;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -59,7 +60,7 @@ public class ImageController {
     }
 
     @Transactional
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, produces = "application/hal+json")
     @ResponseBody
     public Resources<ImageResource> search(
             @RequestParam("lat") double lat,
@@ -75,6 +76,17 @@ public class ImageController {
         Link selfLink = new Link(request.getRequestURL().toString() + String.format("?lat=%f&lon=%f&radius=%f", lat, lon, radius)).withSelfRel();
 
         return new Resources<>(images, selfLink);
+    }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    public void get(
+            @PathVariable("id") String id,
+            HttpServletResponse response
+    ) throws IOException {
+        InputStream stream = imageStorageService.retrieve(id);
+        response.setContentLength(stream.available());
+        response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+        IOUtils.copy(stream, response.getOutputStream());
     }
 
 }
