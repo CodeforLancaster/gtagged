@@ -7,6 +7,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mock.web.MockMultipartFile;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
@@ -34,6 +35,28 @@ public class ImageTests extends AbstractMockMvcTest {
         ).andDo(print())
         .andExpect(status().isCreated())
         .andExpect(header().string("Location", "123"));
+    }
+
+    @Test
+    public void testSearch() throws Exception {
+
+        MockMultipartFile image = new MockMultipartFile("file", "graffiti.jpg", "image/jpeg", "89y3rw8h93f93f".getBytes());
+        when(imageStorageService.store(image)).thenReturn("456");
+
+        // Alice posts a photo from the Borough
+        MVC.perform(multipart("/images").file(image)
+                .param("lat", "54.0481701")
+                .param("lon", "-2.797949")
+        ).andDo(print())
+                .andExpect(status().isCreated())
+                .andExpect(header().string("Location", "456"));
+
+        // Bob looks up local photos from HMP Lancaster Farms (Naughty Bob)
+        MVC.perform(get("/images")
+            .param("lat", "54.052990")
+            .param("lon", "-2.771013")
+            .param("radius", "10"))
+        .andDo(print());
     }
 
 }
