@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,71 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmP-QF-It6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdp-yc-Ir1">
+                                <rect key="frame" x="16" y="597" width="50" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ka-3i-B3u">
+                                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63232741189999997" green="1" blue="0.60056928870000004" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7ka-3i-B3u" secondAttribute="trailing" constant="5" id="RiE-Hz-zdY"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xmt-HU-6Ds"/>
+                                    <constraint firstAttribute="width" constant="50" id="bld-CF-2xw"/>
+                                    <constraint firstItem="7ka-3i-B3u" firstAttribute="leading" secondItem="Hdp-yc-Ir1" secondAttribute="leading" constant="5" id="h6g-Qu-bGv"/>
+                                    <constraint firstAttribute="bottom" secondItem="7ka-3i-B3u" secondAttribute="bottom" constant="5" id="oMP-RJ-hTz"/>
+                                    <constraint firstItem="7ka-3i-B3u" firstAttribute="top" secondItem="Hdp-yc-Ir1" secondAttribute="top" constant="5" id="y7M-h9-5IM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bJ-PQ-J99">
+                                <rect key="frame" x="152.5" y="577" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.33240570200000003" blue="0.36904545750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="22A-de-ptT"/>
+                                    <constraint firstAttribute="height" constant="70" id="ws6-0X-jJf"/>
+                                </constraints>
+                                <state key="normal" title="Press">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuC-fs-wuN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hdp-yc-Ir1" secondAttribute="bottom" constant="20" id="91Z-DZ-qD4"/>
+                            <constraint firstAttribute="trailing" secondItem="LmP-QF-It6" secondAttribute="trailing" id="JeD-MH-Bzz"/>
+                            <constraint firstItem="LmP-QF-It6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LIg-iL-yVE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7bJ-PQ-J99" secondAttribute="bottom" constant="20" id="Mwx-vQ-gpg"/>
+                            <constraint firstItem="Hdp-yc-Ir1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VES-mv-n8b"/>
+                            <constraint firstItem="LmP-QF-It6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vsa-yR-FtC"/>
+                            <constraint firstAttribute="bottom" secondItem="LmP-QF-It6" secondAttribute="bottom" id="iL5-rr-nIW"/>
+                            <constraint firstItem="7bJ-PQ-J99" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j22-za-Q99"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="7bJ-PQ-J99" id="fZf-g5-OyU"/>
+                        <outlet property="scoreLabel" destination="7ka-3i-B3u" id="4mt-is-aAI"/>
+                        <outlet property="scoreView" destination="Hdp-yc-Ir1" id="HOp-sN-79V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
