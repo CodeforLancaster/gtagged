@@ -8,6 +8,10 @@ spring:
       enabled: true
       path: /h2-console
 
+gtagged:
+  storage:
+    directory: storage
+
 logging:
   level:
     org.springframework.security: TRACE
