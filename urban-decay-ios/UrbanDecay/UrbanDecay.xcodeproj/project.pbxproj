@@ -481,14 +481,14 @@
 			baseConfigurationReference = 3A78CD8128449F14E7742B79 /* Pods-UrbanDecayUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AX5B76FXB6;
+				DEVELOPMENT_TEAM = TRUWSKVJ7Z;
 				INFOPLIST_FILE = UrbanDecayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.codeforlancaster.UrbanDecayUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.progressconcepts.UrbanDecayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = UrbanDecay;
@@ -500,14 +500,14 @@
 			baseConfigurationReference = EBB2A87C356B41F431608520 /* Pods-UrbanDecayUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AX5B76FXB6;
+				DEVELOPMENT_TEAM = TRUWSKVJ7Z;
 				INFOPLIST_FILE = UrbanDecayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.codeforlancaster.UrbanDecayUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.progressconcepts.UrbanDecayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = UrbanDecay;

@@ -47,5 +47,7 @@
 	<string>UrbanDecay uses your camera to take photos of decay.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>UrbanDecay allows you to upload images of decay.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>UrbanDecay saves your photos to your Photo Library.</string>
 </dict>
 </plist>

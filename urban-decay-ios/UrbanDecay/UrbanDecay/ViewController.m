@@ -33,6 +33,7 @@
     _cameraActive = false;
     [_scoreLabel setText:@"0"];
     [_cameraButton setTitle:@"Snap" forState:UIControlStateNormal];
+//    [_imageView setHidden:true];
     
     // Make the cameraButton round
     CALayer *cameraButtonLayer = [_cameraButton layer];
@@ -64,6 +65,20 @@
         [self presentViewController:picker animated:YES completion:NULL];
         
     }
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+
+    UIImageWriteToSavedPhotosAlbum(image,
+                                           self,
+                                           @selector(image:finishedSavingWithError:contextInfo:),
+                                           nil);
+
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
 -(void)image:(UIImage *)image
