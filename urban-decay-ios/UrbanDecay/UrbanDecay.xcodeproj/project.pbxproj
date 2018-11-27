@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2807AB9621AD9BAF00360090 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807AB9521AD9BAF00360090 /* AppDelegate.m */; };
+		2807AB9921AD9BAF00360090 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807AB9821AD9BAF00360090 /* ViewController.m */; };
+		2807AB9C21AD9BAF00360090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2807AB9A21AD9BAF00360090 /* Main.storyboard */; };
+		2807AB9E21AD9BB000360090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2807AB9D21AD9BB000360090 /* Assets.xcassets */; };
+		2807ABA121AD9BB000360090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2807AB9F21AD9BB000360090 /* LaunchScreen.storyboard */; };
+		2807ABA421AD9BB000360090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807ABA321AD9BB000360090 /* main.m */; };
+		2807ABAE21AD9BB000360090 /* UrbanDecayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807ABAD21AD9BB000360090 /* UrbanDecayUITests.m */; };
+		E6D5A126ABF0A75778B25545 /* libPods-UrbanDecayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7039AAE27B4CC2A34F4338AA /* libPods-UrbanDecayUITests.a */; };
+		FFE06B5621A0D10D85306C3F /* libPods-UrbanDecay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FDAB76E6131C20B6E63AEB /* libPods-UrbanDecay.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2807ABAA21AD9BB000360090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2807AB8921AD9BAF00360090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2807AB9021AD9BAF00360090;
+			remoteInfo = UrbanDecay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DC521ED46A69DF104CAB9B3 /* Pods-UrbanDecay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanDecay.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanDecay/Pods-UrbanDecay.release.xcconfig"; sourceTree = "<group>"; };
+		2807AB9121AD9BAF00360090 /* UrbanDecay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanDecay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2807AB9421AD9BAF00360090 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2807AB9521AD9BAF00360090 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2807AB9721AD9BAF00360090 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2807AB9821AD9BAF00360090 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2807AB9B21AD9BAF00360090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2807AB9D21AD9BB000360090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2807ABA021AD9BB000360090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2807ABA221AD9BB000360090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2807ABA321AD9BB000360090 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2807ABA921AD9BB000360090 /* UrbanDecayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanDecayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2807ABAD21AD9BB000360090 /* UrbanDecayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UrbanDecayUITests.m; sourceTree = "<group>"; };
+		2807ABAF21AD9BB000360090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A78CD8128449F14E7742B79 /* Pods-UrbanDecayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanDecayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanDecayUITests/Pods-UrbanDecayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7039AAE27B4CC2A34F4338AA /* libPods-UrbanDecayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UrbanDecayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FDAB76E6131C20B6E63AEB /* libPods-UrbanDecay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UrbanDecay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91ADF55626840221DB0BCBCF /* Pods-UrbanDecay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanDecay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanDecay/Pods-UrbanDecay.debug.xcconfig"; sourceTree = "<group>"; };
+		EBB2A87C356B41F431608520 /* Pods-UrbanDecayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanDecayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanDecayUITests/Pods-UrbanDecayUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2807AB8E21AD9BAF00360090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE06B5621A0D10D85306C3F /* libPods-UrbanDecay.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2807ABA621AD9BB000360090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6D5A126ABF0A75778B25545 /* libPods-UrbanDecayUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A1E00A0F36967AD0148103A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91ADF55626840221DB0BCBCF /* Pods-UrbanDecay.debug.xcconfig */,
+				0DC521ED46A69DF104CAB9B3 /* Pods-UrbanDecay.release.xcconfig */,
+				3A78CD8128449F14E7742B79 /* Pods-UrbanDecayUITests.debug.xcconfig */,
+				EBB2A87C356B41F431608520 /* Pods-UrbanDecayUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2807AB8821AD9BAF00360090 = {
+			isa = PBXGroup;
+			children = (
+				2807AB9321AD9BAF00360090 /* UrbanDecay */,
+				2807ABAC21AD9BB000360090 /* UrbanDecayUITests */,
+				2807AB9221AD9BAF00360090 /* Products */,
+				1A1E00A0F36967AD0148103A /* Pods */,
+				E3EDB266DCAE51FE94979C5B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2807AB9221AD9BAF00360090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2807AB9121AD9BAF00360090 /* UrbanDecay.app */,
+				2807ABA921AD9BB000360090 /* UrbanDecayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2807AB9321AD9BAF00360090 /* UrbanDecay */ = {
+			isa = PBXGroup;
+			children = (
+				2807AB9421AD9BAF00360090 /* AppDelegate.h */,
+				2807AB9521AD9BAF00360090 /* AppDelegate.m */,
+				2807AB9721AD9BAF00360090 /* ViewController.h */,
+				2807AB9821AD9BAF00360090 /* ViewController.m */,
+				2807AB9A21AD9BAF00360090 /* Main.storyboard */,
+				2807AB9D21AD9BB000360090 /* Assets.xcassets */,
+				2807AB9F21AD9BB000360090 /* LaunchScreen.storyboard */,
+				2807ABA221AD9BB000360090 /* Info.plist */,
+				2807ABA321AD9BB000360090 /* main.m */,
+			);
+			path = UrbanDecay;
+			sourceTree = "<group>";
+		};
+		2807ABAC21AD9BB000360090 /* UrbanDecayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2807ABAD21AD9BB000360090 /* UrbanDecayUITests.m */,
+				2807ABAF21AD9BB000360090 /* Info.plist */,
+			);
+			path = UrbanDecayUITests;
+			sourceTree = "<group>";
+		};
+		E3EDB266DCAE51FE94979C5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79FDAB76E6131C20B6E63AEB /* libPods-UrbanDecay.a */,
+				7039AAE27B4CC2A34F4338AA /* libPods-UrbanDecayUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2807AB9021AD9BAF00360090 /* UrbanDecay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2807ABB221AD9BB000360090 /* Build configuration list for PBXNativeTarget "UrbanDecay" */;
+			buildPhases = (
+				4F0DC01747E001BF6B5D103C /* [CP] Check Pods Manifest.lock */,
+				2807AB8D21AD9BAF00360090 /* Sources */,
+				2807AB8E21AD9BAF00360090 /* Frameworks */,
+				2807AB8F21AD9BAF00360090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UrbanDecay;
+			productName = UrbanDecay;
+			productReference = 2807AB9121AD9BAF00360090 /* UrbanDecay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2807ABA821AD9BB000360090 /* UrbanDecayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2807ABB521AD9BB000360090 /* Build configuration list for PBXNativeTarget "UrbanDecayUITests" */;
+			buildPhases = (
+				7C48328F31DDB1113255FF10 /* [CP] Check Pods Manifest.lock */,
+				2807ABA521AD9BB000360090 /* Sources */,
+				2807ABA621AD9BB000360090 /* Frameworks */,
+				2807ABA721AD9BB000360090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2807ABAB21AD9BB000360090 /* PBXTargetDependency */,
+			);
+			name = UrbanDecayUITests;
+			productName = UrbanDecayUITests;
+			productReference = 2807ABA921AD9BB000360090 /* UrbanDecayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2807AB8921AD9BAF00360090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Code for Lancaster";
+				TargetAttributes = {
+					2807AB9021AD9BAF00360090 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2807ABA821AD9BB000360090 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2807AB9021AD9BAF00360090;
+					};
+				};
+			};
+			buildConfigurationList = 2807AB8C21AD9BAF00360090 /* Build configuration list for PBXProject "UrbanDecay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2807AB8821AD9BAF00360090;
+			productRefGroup = 2807AB9221AD9BAF00360090 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2807AB9021AD9BAF00360090 /* UrbanDecay */,
+				2807ABA821AD9BB000360090 /* UrbanDecayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2807AB8F21AD9BAF00360090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2807ABA121AD9BB000360090 /* LaunchScreen.storyboard in Resources */,
+				2807AB9E21AD9BB000360090 /* Assets.xcassets in Resources */,
+				2807AB9C21AD9BAF00360090 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2807ABA721AD9BB000360090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F0DC01747E001BF6B5D103C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrbanDecay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C48328F31DDB1113255FF10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrbanDecayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2807AB8D21AD9BAF00360090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2807AB9921AD9BAF00360090 /* ViewController.m in Sources */,
+				2807ABA421AD9BB000360090 /* main.m in Sources */,
+				2807AB9621AD9BAF00360090 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2807ABA521AD9BB000360090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2807ABAE21AD9BB000360090 /* UrbanDecayUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2807ABAB21AD9BB000360090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2807AB9021AD9BAF00360090 /* UrbanDecay */;
+			targetProxy = 2807ABAA21AD9BB000360090 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2807AB9A21AD9BAF00360090 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2807AB9B21AD9BAF00360090 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2807AB9F21AD9BB000360090 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2807ABA021AD9BB000360090 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2807ABB021AD9BB000360090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2807ABB121AD9BB000360090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2807ABB321AD9BB000360090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91ADF55626840221DB0BCBCF /* Pods-UrbanDecay.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AX5B76FXB6;
+				INFOPLIST_FILE = UrbanDecay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.codeforlancaster.UrbanDecay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2807ABB421AD9BB000360090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC521ED46A69DF104CAB9B3 /* Pods-UrbanDecay.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AX5B76FXB6;
+				INFOPLIST_FILE = UrbanDecay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.codeforlancaster.UrbanDecay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2807ABB621AD9BB000360090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A78CD8128449F14E7742B79 /* Pods-UrbanDecayUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AX5B76FXB6;
+				INFOPLIST_FILE = UrbanDecayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.codeforlancaster.UrbanDecayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UrbanDecay;
+			};
+			name = Debug;
+		};
+		2807ABB721AD9BB000360090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB2A87C356B41F431608520 /* Pods-UrbanDecayUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AX5B76FXB6;
+				INFOPLIST_FILE = UrbanDecayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.codeforlancaster.UrbanDecayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UrbanDecay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2807AB8C21AD9BAF00360090 /* Build configuration list for PBXProject "UrbanDecay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2807ABB021AD9BB000360090 /* Debug */,
+				2807ABB121AD9BB000360090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2807ABB221AD9BB000360090 /* Build configuration list for PBXNativeTarget "UrbanDecay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2807ABB321AD9BB000360090 /* Debug */,
+				2807ABB421AD9BB000360090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2807ABB521AD9BB000360090 /* Build configuration list for PBXNativeTarget "UrbanDecayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2807ABB621AD9BB000360090 /* Debug */,
+				2807ABB721AD9BB000360090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2807AB8921AD9BAF00360090 /* Project object */;
+}
