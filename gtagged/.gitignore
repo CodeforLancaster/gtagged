@@ -26,3 +26,6 @@
 
 ### H2
 *.db
+
+### images
+storage/

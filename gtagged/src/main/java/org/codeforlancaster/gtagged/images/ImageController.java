@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+
 /**
  * Created by wfaithfull on 27/11/18.
  */
@@ -27,7 +29,7 @@ public class ImageController {
     public ResponseEntity<Void> upload(
             @RequestParam("file") MultipartFile file,
             @RequestParam("lat") double lat,
-            @RequestParam("lon") double lon) {
+            @RequestParam("lon") double lon) throws IOException {
 
         String uri = imageStorageService.store(file);
         Image image = new Image();
