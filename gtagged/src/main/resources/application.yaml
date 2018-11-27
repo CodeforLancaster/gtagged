@@ -2,7 +2,7 @@ spring:
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.xml
   datasource:
-    url: jdbc:hsqldb:file:gtagged_testdb
+    url: jdbc:hsqldb:file:gtagged.db
 
 gtagged:
   storage:
