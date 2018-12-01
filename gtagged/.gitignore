@@ -25,7 +25,7 @@
 /.nb-gradle/
 
 ### H2
-*.db
+*.db*
 
 ### images
 storage/

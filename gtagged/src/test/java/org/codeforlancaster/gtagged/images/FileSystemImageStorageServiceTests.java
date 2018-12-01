@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -72,11 +71,11 @@ public class FileSystemImageStorageServiceTests {
                 getFile("lancaster.jpg"));
         String uri = SERVICE.store(mpf);
 
-        DuplicateKeyException ex = null;
+        FileSystemImageStorageService.DuplicateImageException ex = null;
 
         try {
             SERVICE.store(mpf);
-        } catch (DuplicateKeyException e) {
+        } catch (FileSystemImageStorageService.DuplicateImageException e) {
             ex = e;
         }
 

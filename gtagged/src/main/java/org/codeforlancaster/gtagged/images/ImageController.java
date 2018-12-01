@@ -85,7 +85,7 @@ public class ImageController {
     ) throws IOException {
         InputStream stream = imageStorageService.retrieve(id);
         response.setContentLength(stream.available());
-        response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+        response.setContentType("image/" + id.split(".")[1]);
         IOUtils.copy(stream, response.getOutputStream());
     }
 
