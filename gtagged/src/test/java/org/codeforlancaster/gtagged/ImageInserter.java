@@ -20,6 +20,9 @@ import java.net.URLConnection;
 
 /**
  * Created by wfaithfull on 28/11/18.
+ *
+ * The purpose of this class is just to provide the means to insert an image in a running application for testing
+ * purposes, and also neatly defines the exact process by which images are transferred over HTTP in this application.
  */
 public class ImageInserter {
 
